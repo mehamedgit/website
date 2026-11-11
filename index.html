@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>THE AYUNI EDITION</title>
+<meta name="description" content="A very unofficial birthday publication.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌷</text></svg>">
+<style>
+:root{--iv:#F6F1E4;--cr:#EFE6D3;--ch:#241F1C;--bu:#6E1F2B;--go:#B08A45;--st:#3F5B3F;--bg:var(--iv);--fg:var(--ch);--ac:var(--bu);--mu:rgba(36,31,28,.55)}
+body.cream{--bg:var(--cr)}
+body.dark{--bg:var(--ch);--fg:var(--iv);--ac:var(--go);--mu:rgba(246,241,228,.55)}
+*{box-sizing:border-box}html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--fg);font:16px/1.6 Inter,system-ui,sans-serif;overflow:hidden;transition:background .8s,color .8s}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;opacity:.05;mix-blend-mode:multiply;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+#stage{position:fixed;inset:0;overflow-y:auto;overflow-x:hidden;transition:opacity .35s;-webkit-overflow-scrolling:touch}
+.pg{max-width:640px;margin:0 auto;min-height:100%;display:flex;flex-direction:column;justify-content:center;gap:22px;text-align:center;padding:calc(36px + env(safe-area-inset-top)) 22px calc(130px + env(safe-area-inset-bottom))}
+.b{animation:in .9s both}.slow .b{animation-duration:2.4s}
+@keyframes in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;font-weight:700;margin:0;line-height:1.05}
+h2{font-size:clamp(2rem,9vw,3.4rem)}h3{font-size:1.5rem}
+.big{font-size:clamp(3.4rem,18vw,6.5rem);font-weight:500}
+.q{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:clamp(1.25rem,4.5vw,1.6rem);margin:0}
+.k,.m{font-family:'Courier New',monospace;letter-spacing:.16em;text-transform:uppercase;font-size:.72rem;margin:0}
+.k{color:var(--ac)}.m{color:var(--mu)}
+.hw{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.25rem;color:var(--bu);transform:rotate(-1.5deg)}
+body.dark .hw{color:var(--go)}
+.card{border:1px solid color-mix(in srgb,var(--fg) 22%,transparent);padding:20px;text-align:left;background:color-mix(in srgb,var(--fg) 4%,transparent)}
+.paper{background:#F6F1E4;color:var(--ch);box-shadow:0 20px 50px -25px rgba(0,0,0,.45);padding:28px 22px;white-space:pre-line}
+.dk{background:var(--ch);color:var(--iv);text-align:center}
+.row{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center}
+.row>button{background:var(--cr);border:0;padding:16px 8px;box-shadow:0 12px 30px -18px rgba(0,0,0,.5);color:var(--ch);cursor:pointer}
+.row>button .q{font-size:1.1rem}
+.two{display:grid;gap:14px}@media(min-width:560px){.two{grid-template-columns:1fr 1fr}}
+.bt{font:inherit;font-family:'Courier New',monospace;letter-spacing:.12em;text-transform:uppercase;font-size:.82rem;min-height:46px;padding:12px 20px;background:var(--ch);color:var(--iv);border:1px solid var(--ch);cursor:pointer}
+body.dark .bt{background:var(--go);color:var(--ch);border-color:var(--go)}
+.bt.o{background:transparent;color:inherit;border-color:color-mix(in srgb,currentColor 45%,transparent)}
+.bt:disabled{opacity:.4}.bts{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.stop{font:inherit;text-align:left;background:var(--iv);border:0;padding:16px;box-shadow:0 12px 30px -18px rgba(0,0,0,.5);cursor:pointer;color:var(--ch);min-height:64px}
+.stop b{font-family:'Playfair Display',serif;letter-spacing:.06em}.stop span{display:none;margin-top:6px}.stop.o span{display:block}
+.stamp{width:60px;height:76px;border:2px dashed var(--bu);background:var(--iv);color:var(--bu);cursor:pointer;margin:0 auto}
+.tl{display:inline-block;color:var(--ac);vertical-align:middle}.st{color:var(--st)}
+.vin{width:min(58vw,220px);aspect-ratio:1;border-radius:50%;margin:0 auto;background:repeating-radial-gradient(#0d0d0d 0 2px,#1d1d1d 2px 4px);border:4px solid rgba(176,138,69,.5);display:grid;place-items:center;cursor:pointer;padding:0}
+.vin i{width:34%;aspect-ratio:1;border-radius:50%;background:var(--go);color:var(--ch);font:600 .5rem 'Courier New',monospace;display:grid;place-items:center}
+.spin{animation:sp 5s linear infinite}.sp2{animation-duration:1.2s}@keyframes sp{to{transform:rotate(360deg)}}
+.bar{height:3px;background:rgba(246,241,228,.18);max-width:260px;margin:0 auto}.bar i{display:block;height:100%;width:0;background:var(--go)}.bar.fk i{animation:fk 30s linear forwards}@keyframes fk{to{width:100%}}
+.sc{display:flex;justify-content:center;align-items:center;gap:26px}.sc b{font:700 3rem 'Playfair Display',serif;display:block}
+#r{stroke-dasharray:150;stroke-dashoffset:150;transition:stroke-dashoffset 1.8s}#r.on{stroke-dashoffset:0}
+#pp{opacity:0;transition:opacity 1s,transform 1.4s}#pp.on{opacity:1}
+#fl{opacity:0;transform:scale(.3);transform-origin:100px 80px;transition:all 1.6s}#fl.on{opacity:1;transform:none}
+.hl{border-top:1px solid color-mix(in srgb,var(--fg) 25%,transparent);padding:10px 0;margin:0;font-family:'Courier New',monospace;letter-spacing:.1em;font-size:.78rem;color:var(--ac)}
+.board{background:#1b2b20;border:8px solid #3d2a1a;color:#F6F1E4;padding:28px 16px;cursor:pointer;width:100%;font:inherit}
+.board li{list-style:none;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.25rem}.board ul{padding:0;margin:14px 0 0}
+#bar{position:fixed;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:linear-gradient(transparent,var(--bg) 40%);z-index:5}
+#go{flex:1;max-width:360px;margin:0 auto}#mu{font-size:.8rem}#mu.on{border-color:var(--ac);color:var(--ac)}#go{padding:10px 8px;line-height:1.25}#bk,#tc,#mu{background:none;border:1px solid color-mix(in srgb,var(--fg) 30%,transparent);color:var(--fg);width:46px;height:46px;cursor:pointer;font-size:1.1rem;padding:0}
+#pgn{position:absolute;left:0;right:0;top:-14px;text-align:center;pointer-events:none}
+#prog{position:fixed;top:0;left:0;height:3px;background:var(--ac);z-index:6;transition:width .5s}
+#toast{position:fixed;left:50%;bottom:calc(88px + env(safe-area-inset-bottom));transform:translateX(-50%);background:var(--ch);color:var(--iv);padding:12px 18px;font:.8rem 'Courier New',monospace;letter-spacing:.08em;max-width:88vw;text-align:center;opacity:0;pointer-events:none;transition:opacity .3s;z-index:9}
+#toast.on{opacity:1}
+#intro{position:fixed;inset:0;background:#171310;color:var(--iv);z-index:20;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;gap:10px}
+#tw{min-height:110px;font:.9rem 'Courier New',monospace;color:var(--go);letter-spacing:.2em}#tw p{margin:4px 0}
+#intro .x{opacity:0;transition:opacity 1.2s}#intro .x.on{opacity:1}
+.fin{font-size:3.6rem}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+button:focus-visible{outline:2px solid var(--go);outline-offset:3px}
+.stk{width:min(72vw,280px);margin:6px auto;padding:10px;background:#fff;border-radius:22px;box-shadow:0 18px 40px -18px rgba(0,0,0,.55),0 0 0 1px rgba(0,0,0,.08);transform:rotate(-3deg);cursor:pointer;transition:transform .35s;border:0}
+.stk img{display:block;width:100%;height:auto;border-radius:14px}
+.stk.fl2{transform:rotate(3deg) scale(1.03)}
+.stk2{display:block;width:min(84vw,340px);margin:8px auto;padding:0;background:none;border:0;cursor:pointer;transform:rotate(2.5deg);transition:transform .35s}.stk2 img{display:block;width:100%;height:auto;filter:drop-shadow(3px 0 0 #fff) drop-shadow(-3px 0 0 #fff) drop-shadow(0 3px 0 #fff) drop-shadow(0 -3px 0 #fff) drop-shadow(0 12px 14px rgba(0,0,0,.35))}.stk2.fl2{transform:rotate(-3deg) scale(1.04)}
+.story{padding:30px 24px;text-align:left}
+.story h3{text-align:center;margin-bottom:6px}
+.story .by{text-align:center;margin-bottom:22px}
+.story p.t{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:1.2rem;line-height:1.65;margin:0 0 1.1em}
+.story p.t:last-child{margin-bottom:0}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="t" viewBox="0 0 48 64"><path d="M24 4C15 4 10 13 10 21c0 6 4 10 9 12-1 2-2 3-4 4"/><path d="M24 4C33 4 38 13 38 21c0 6-4 10-9 12 1 2 2 3 4 4"/><path d="M24 6C24 6 19 14 24 24C29 14 24 6 24 6Z"/><path d="M24 33V60"/><path d="M24 42C24 42 14 40 12 48"/><path d="M24 50C24 50 34 48 37 56"/></symbol></svg>
+<div id="prog"></div>
+<main id="stage" aria-live="polite"></main>
+<div id="bar"><button id="bk" aria-label="Previous page">←</button><button id="go" class="bt">CONTINUE</button><button id="tc" aria-label="A small tulip"></button><button id="mu" aria-label="Play song">▶</button><span id="pgn" class="m"></span></div>
+<div id="toast" role="status"></div>
+<div id="intro"><div id="tw" aria-live="polite"></div>
+<h1 id="in1" class="x big" style="font-size:clamp(2.6rem,13vw,5rem)"></h1>
+<p id="in2" class="x" style="font:700 1.4rem 'Playfair Display',serif;letter-spacing:.06em;margin:14px 0 0"></p>
+<p id="in3" class="x q" style="opacity:.7"></p>
+<button id="in4" class="x bt" style="margin-top:20px;background:var(--bu);border-color:var(--bu);color:var(--iv)"></button></div>
+<noscript><p style="padding:2rem">This edition needs JavaScript.</p></noscript>
+<script>
+/* =====================================================================
+   TEXT — EVERY WORD ON THE SITE LIVES HERE. Edit only the quoted text.
+   • Plain text only (no HTML). Use \n for a line break.
+   • To add/remove a line in a list [ ... ], add/remove a quoted item.
+   • Keep the quotes and commas as they are. Everything below this block
+     is code — you shouldn't need to touch it.
+   • Song = audio/ollman-key.m4a and sticker photo = img/sticker.jpg (folders next to this file).
+   ===================================================================== */
+const TEXT={
+ site:{name:'Ayuni Abdulkerim',first:'Ayuni',title:'THE BIRTHDAY',subtitle:'made by yours truely.',enter:'Start the experience'},
+ ui:{cont:'CONTINUE',again:'ANOTHER FORTUNE',page:'PAGE',back:'Previous page',songPlay:'Play song',songPause:'Pause song'},
+ intro:['be ready to be amazed','IN 3..2..1','','SUBJECT FOUND.'],
+ /* 1 · Name */
+ p1:{masthead:'',
+  lines:['the girl more unique than her name.',''],
+  note:'Teacher’s note:.',
+  onlyChild:'Your parents naming sense is impeccable.'},
+ /* 3 · Arts Desk (one line per tap while the flower builds) */
+ p3:{kicker:'PAGE 02 · CREATIVE',title:'ARTIST GIRL',alt:'',
+  lines:['THERE IS A RIBBON.','THERE IS PAPER TOO.','and in a way only god knows how you can make an ecosystem out of them']},
+ /* 5 · Soundtrack */
+ p5:{kicker:'PAGE 03 · music',title:'i though adding one of your favorite songs to the exeperiance was a good idea',artwork:'ARTWORK',play:'PLAY',pause:'PAUSE',
+  noAudio:'Audio not connected yet — set a file path (src) on a track in TEXT.p5.tracks.',
+  tracks:[{title:'Ollman Key',artist:'Hachalu Hundessa',src:'#song'}]},
+ /* 6 · Sports Desk + Teacher Derby */
+ p6:{kicker:'PAGE 04 · asafari football taste',title:'united gonna whoop your club',himLabel:'me',him:'Manchester United',herLabel:'you',her:'Tottenham Hotspur',vs:'VS.',
+  relations:'truth be told both teams are ass.',
+  posTitle:'your kwas akuam',pos:'ye united mekegna',
+  respTitle:'my kwas akuam',resp:'cursed with being a mmanchester united fan.',
+  derbyTitle:'THE TEACHER DERBY',derbySub:'Manchester United vs. Tottenham ',scoreUnited:'MAN UTD',scoreSpurs:'SPURS',
+  simulate:'SIMULATE MATCH',reset:'RESET',playing:'…',
+  spursGoal:'hehe,you still gonna lose.',unitedGoal:'as much as shit as this team is i like seeing it winning',noGoal:'both clubs arae shit',
+  disclaimer:'selemenchel'},
+ /* 8 · Writing Desk */
+ p8:{kicker:'PAGE 05 · WRITING DESK',title:'THE WRITING DESK',
+  lines:['Apparently, someone thinks I should stop pretending to be the teacher of Shakespeare…','…and actually learn how to write.'],
+  assignLabel:'CURRENT ASSIGNMENT',assign:'Write something worth reading.',statusLabel:'STATUS',status:'STILL LEARNING',
+  lead:'So I tried.',storyTitle:'THE SEARCH',storyBy:'A SHORT STORY',
+  story:[
+   'This story follows Andal, a scholar of the East residing at the Great Library of Il Libro, situated in the capital city of Rome. This place has defined its place in history books as the place where the world gets to meet itself. With its centuries-old infrastructure and near-infinite supply of books, its gates have welcomed people of every standing, from starving peasants who have a hard time making ends meet to merchants whose names hail across the seas, and even world leaders whose decisions can change the order of the world in mere minutes.',
+   'For this and many more reasons, this place is seen as a sanctuary of knowledge that can make the dreams of every scholar come true. It is also for this reason that Andal chose to journey here, to quench his thirst for knowledge and discover the meaning of his existence.',
+   'But the library wasn’t going to let him find what he sought so easily.',
+   'Once he set foot inside, he realised that it had been sectioned into three main parts. The lower floors, where the library is used the most, don’t require people to go any higher, as they can answer most of the questions that haunt the mundane mind. However, even the people who frequent these floors don’t know the criteria by which the library is sectioned.',
+   'The few gifted individuals who realise the answer are granted access to the middle floors, where they can continue their endeavour. Just as only a handful of people are allowed into the middle floors, the lower floors, from floor one to four, can only be accessed sequentially, once one understands the previous floor.',
+   'This means that, whether Andal likes it or not, he has to start from the bottom if he wants to find the answers to his questions, which can only be answered on the highest floor, where it is said that the knowledge surpasses the human mind.',
+   'Andal’s dreams of finding his answers anytime soon were crushed. Even then, he knew he was in heaven, given the sheer volume of books that stretched farther than his eyes could see.',
+   'So, as all his predecessors had done, he went in to start his new life.',
+   'With glistening eyes, he read through the catalogues in front of him. As he was trying to choose which book to start with, a child reading caught his eye. The kid was sitting on the floor, his back against the shelf, reading what appeared to be a storybook. The book had a white background, with a little blonde boy standing on the moon.',
+   'One could tell the child was enjoying the book by the way he smiled. So I went over and asked him about its name. He replied, "It’s called *The Little Prince*. It’s the book I read every time I come here. It’s about the adventures of a mysterious little boy and the friends he makes along his journey."',
+   'He then proceeded to explain the characters he had met within the book. But before he could finish his explanation, his mother came and called out to him. After saying our goodbyes, I picked up the book and started reading.',
+   'It didn’t take me long to finish it, but after I was done, I started thinking about the characters, particularly one: the geographer.',
+   'The geographer is someone who spends his life recording every piece of information he gets from travellers about the world. Because of this, he has a vast pool of knowledge about most planets, including his own. Yet, despite all this, he has never even explored his own planet. He believes explorers are the ones who should experience the world and report their findings, while he records and stores that knowledge.',
+   'By this logic, I am no different from the geographer in my choice to come here to find a written answer to my questions rather than discover my own.',
+   'But would that really be wrong? What if I manage to find both answers? Which one would be the right one? My interpretation, which comes from my subjective perspective and personal experiences, or the interpretation of an objective observer, based purely on recorded facts?',
+   'Wouldn’t any scholar strive to live an objective life? Why would I call myself a scholar if I tried to define myself only through my own eyes?',
+   'With this question lingering in the back of my mind, I wanted another book that could help me find an answer. So I put down the book and went on my way to my next discovery.']},
+ /* 9 · Sticker Desk */
+ p9:{kicker:'PAGE 06 · STICKER ',title:'THE STICKER ',alt:'A stern older woman in a floral dress and cream shawl, hands on her hips, looking deeply unimpressed',
+  lines:['You remember when you asked me for a sticker.','yea that sticker \n negeregna arogit.','This was harder than it sounds.'],
+  caption:'FIG. 1 · MAXIMUM DISAPPROVAL',caption2:'FIG. 2 · THE SIDE-EYE',alt2:'A stern older woman in a cream shawl and patterned head wrap, hand on her hip, giving a suspicious side-eye',
+  reportTitle:'SEARCH REPORT',report:'Searched: everywhere.\nFound: this.\nJudgement level: extreme.',note:'I tried my best.',
+  buttons:[['I LOVE IT','She is judging your approval.'],['TRY AGAIN','you gonna give me more details then.'],['SHE’S JUDGING ME','Correct. you brought this on yourself.']]},
+ /* 10 · The Teacher's Class */
+ p10:{kicker:'PAGE 07',title:'THE TEACHER’S CLASS',students:['Socrates','Shakespeare','Aristotle','Ayuni'],
+  lines:['endemetakiw I’ve been teaching some of history’s greatest minds.','am just too cool']},
+ /* 11 · Future Desk */
+ p11:{kicker:'PAGE 08 · FUTURE DESK',title:'WHAT COMES NEXT?',steps:['learn','have fun','work','do some questionable decisions in life','live.'],
+  closing:'however you live your life, I hope you keep becoming more of you.',
+  drTitle:'DR. AYUNI ABDULKERIM',status:'Status: inevitable',progress:'Progress: going strong'},
+ /* 12 · One Final Page — put YOUR message in "letter" */
+ p12:{kicker:'PAGE 09',title:'ONE FINAL PAGE',
+  letter:'I think this is enough shenanigans for today. My main point in all of this is simply to express how happy and thankful I am that you’re part of my life.\n\nI know you’re a special person in this world, the kind of person everyone wishes they had the chance to meet. Too bad they’re not as lucky as I am.\n\nI’m also grateful for how you’ve opened my eyes to topics and perspectives I probably would have never explored or even been aware of if I hadn’t met you. You’ve also become one of the reasons I constantly want to be a better person. Although, just so you know, I’m not going to let you get too far ahead of me that easily.\n\nBut there are a few things I need to make sure you know about yourself first.\n\nFor starters, YOU ARE TOO COOL. Seriously, save some for the rest of us.\n\nSecondly, you’re way too smart. Being academically smart is one thing, but in your case, you literally know everything. Politics, economics, psychology, law, geography and the list just keeps going. How is that even fair?\n\nYou’re also the best artisan I’ve ever met. Who even thinks of creating an entire ecosystem out of some ribbons? And then there’s that damn photographic memory of yours. You have no idea how jealous I am of that.\n\nBut jokes aside, my point is that I genuinely appreciate you and everything that makes you YOU.\n\nI know I’m not the best when it comes to expressing myself or putting my emotions into words, but I still wanted to do something special for you on your birthday, something that would hopefully show how much I appreciate having you in my life.\n\nI may have underestimated just how difficult making this website would be, but that wasn’t going to stop me. So I really hope you like it.\n\nAnd once again, thank you for being born.',
+  happy:'HAPPY BIRTHDAY, AYUNI',signature:'From,\nThe world’s greatest teacher of Socrates and Shakespeare.',ps:'Unfortunately still a Manchester United supporter.'},
+ /* 13 · Tulip reveal */
+ p13:{oh:'Oh…',line:'You probably figured out why the tulips were everywhere.',emoji:'🌷'},
+ /* 14 · Final surprise */
+ p14:{wait:'Wait.',envelopeAlt:'An envelope',fortuneLabel:'YOUR BIRTHDAY FORTUNE',button:'ONE LAST THING',end:'END OF ISSUE 01',
+  fortunes:['You will win an argument today. The teacher will pretend he let you.','A tulip is closer than you think.','Your next idea will be better than the last one.','Prediction: a better question than the teacher’s.','The raw onion committee has approved this year.']},
+ /* Little click-surprises */
+ eggs:{united:'⚠️ DIPLOMATIC INCIDENT',spurs:'Celebration authorized.',teacher:'Students apparently continue to arrive.',tulip:'You weren’t supposed to notice that yet.',sticker2:'Second opinion: also judging.',sticker:'She is judging you. Yes, you.'}
+};
+
+/* ====================== CODE (no need to edit below) ====================== */
+const S=TEXT.site,U=TEXT.ui;
+const $=s=>document.querySelector(s),RM=matchMedia('(prefers-reduced-motion:reduce)').matches,w=ms=>new Promise(r=>setTimeout(r,ms));
+const E=x=>String(x).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'),N=x=>E(x).replace(/\n/g,'<br>');
+const T=(n=22)=>`<svg class="tl" width="${n}" viewBox="0 0 48 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><use href="#t"/></svg>`;
+const Q=x=>`<p class="q">${N(x)}</p>`,K=x=>`<p class="k">${N(x)}</p>`,M=x=>`<p class="m">${N(x)}</p>`,H=(x,st='')=>`<h2 style="${st}">${N(x)}</h2>`;
+let tt;const toast=x=>{const e=$('#toast');e.textContent=x;e.classList.add('on');clearTimeout(tt);tt=setTimeout(()=>e.classList.remove('on'),3500)};
+const add=id=>$('#'+id).classList.add('on');
+/* ----- widgets ----- */
+let su=0,ss=0,busy=0;
+function sim(){const P=TEXT.p6;if(busy)return;busy=1;$('#sm').textContent=P.playing;setTimeout(()=>{const r=Math.random();let m;if(r<.45){ss++;m=P.spursGoal}else if(r<.75){su++;m=P.unitedGoal}else m=P.noGoal;$('#su').textContent=su;$('#ss').textContent=ss;$('#sm').textContent=m;busy=0},RM?0:900)}
+function rst(){su=ss=0;$('#su').textContent=0;$('#ss').textContent=0;$('#sm').textContent=''}
+let ti=0,au=null,pl=0;
+function srcOf(s){return s==='#song'?'audio/ollman-key.m4a':s}
+function mkAudio(){const tr=TEXT.p5.tracks[ti];au=new Audio(srcOf(tr.src));au.ontimeupdate=()=>{const i=$('#pb i');i&&(i.style.width=(au.currentTime/(au.duration||1)*100)+'%')};au.onended=()=>{pl=0;songSync()}}
+/* The song is ONE player for the whole experience: the bottom-bar button (#mu) and the player on page 3 both control it. */
+function songSync(){const P=TEXT.p5,tr=P.tracks[ti],X=TEXT.ui,set=(q,f)=>{const e=$(q);e&&f(e)};
+ set('#mt',e=>e.textContent=tr.title);set('#ma',e=>e.textContent=tr.artist);set('#vn',e=>e.classList.toggle('spin',!!pl));set('#pp2',e=>e.textContent=pl?P.pause:P.play);
+ set('#mn',e=>e.textContent=tr.src?'':P.noAudio);set('#pb',e=>e.classList.toggle('fk',!!pl&&!tr.src));
+ set('#pb i',e=>{if(au&&au.duration)e.style.width=(au.currentTime/au.duration*100)+'%'});
+ const m=$('#mu');m.textContent=pl?'❚❚':'▶';m.classList.toggle('on',!!pl);m.setAttribute('aria-label',pl?X.songPause:X.songPlay);m.title=pl?X.songPause:X.songPlay}
+function music(a){const L=TEXT.p5.tracks;
+ if(a==='n'||a==='b'){ti=(ti+(a==='n'?1:L.length-1))%L.length;if(au){au.pause();au=null}pl=0}
+ if(a==='p')pl=!pl;
+ const tr=L[ti];
+ if(tr.src){if(!au)mkAudio();if(pl){const r=au.play();r&&r.catch&&r.catch(()=>{pl=0;songSync()})}else au.pause()}
+ songSync()}
+function fortune(){const f=TEXT.p14.fortunes;$('#ft').textContent=f[Math.floor(Math.random()*f.length)]}
+/* ===== PAGES ===== each beat = one tap of CONTINUE. t = theme, n = page number shown. */
+const P1=TEXT.p1,P3=TEXT.p3,P5=TEXT.p5,P6=TEXT.p6,P8=TEXT.p8,P9=TEXT.p9,P10=TEXT.p10,P11=TEXT.p11,P12=TEXT.p12,P13=TEXT.p13,P14=TEXT.p14;
+const PAGES=[
+{t:'',n:1,b:[
+ `${P1.masthead?M(P1.masthead):''}<div style="margin:18px 0 6px"><button class="stop" style="background:none;box-shadow:none;min-height:0;padding:0" onclick="toast(TEXT.eggs.tulip)" aria-label="Tulip">${T(34)}</button></div><h2 class="big">${N(S.first)}</h2>`,
+ P1.lines.map(Q).join(''),
+ `<p class="hw">${N(P1.note)}</p>`,
+ `<p class="q" style="opacity:.6">${N(P1.onlyChild)}</p>`]},
+{t:'cream',n:2,b:[
+ {h:`${K(P3.kicker)}${H(P3.title)}<svg viewBox="0 0 200 160" width="100%" style="max-width:300px;margin:10px auto" role="img" aria-label="${E(P3.alt)}"><rect x="10" y="132" width="180" height="3" fill="currentColor" opacity=".2"/><path id="r" d="M30 128C55 90 85 108 100 80" stroke="#6E1F2B" stroke-width="10" stroke-linecap="round" fill="none"/><rect id="pp" x="118" y="52" width="30" height="30" fill="#F6F1E4" stroke="#241F1C" stroke-width="1.5" transform="rotate(12 133 67)"/><g id="fl"><path d="M100 90V130" stroke="#3F5B3F" stroke-width="3"/><circle cx="100" cy="80" r="9" fill="#B08A45"/>${[0,60,120,180,240,300].map(d=>`<ellipse cx="116" cy="80" rx="15" ry="7" fill="#6E1F2B" opacity=".85" transform="rotate(${d} 100 80)"/>`).join('')}</g></svg>`},
+ {h:Q(P3.lines[0]),do:()=>add('r')},
+ {h:Q(P3.lines[1]),do:()=>{add('pp');document.getElementById('pp').style.transform='translate(-18px,18px) rotate(45deg)'}},
+ {h:Q(P3.lines[2]),do:()=>{add('fl');$('#pp').style.opacity=.25}}]},
+{t:'dark',n:3,b:[
+ {h:`${K(P5.kicker)}${H(P5.title)}<button class="vin" id="vn" onclick="this.classList.toggle('sp2')" aria-label="Vinyl record"><i>${N(P5.artwork)}</i></button><div><h3 id="mt"></h3><p class="q" id="ma"></p></div><div class="bts"><button class="bt" id="pp2" onclick="music('p')">${N(P5.play)}</button></div><div class="bar" id="pb"><i></i></div><p class="m" id="mn"></p>`,do:()=>music()}]},
+{t:'',n:4,b:[
+ `${K(P6.kicker)}${H(P6.title)}<div class="row"><button onclick="toast(TEXT.eggs.united)">${M(P6.himLabel)}<div style="font-size:1.8rem">🔴</div>${Q(P6.him)}</button><b class="q">${N(P6.vs)}</b><button onclick="toast(TEXT.eggs.spurs)">${M(P6.herLabel)}<div style="font-size:1.8rem">⚪</div>${Q(P6.her)}</button></div>`,
+ Q(P6.relations)+`<div class="card">${K(P6.posTitle)}${Q(P6.pos)}</div>`,
+ `<div class="card">${K(P6.respTitle)}${Q(P6.resp)}</div>`,
+ `<div class="card dk"><h3>${N(P6.derbyTitle)}</h3>${M(P6.derbySub)}<div class="sc"><div>${M(P6.scoreUnited)}<b id="su">0</b></div><span>—</span><div>${M(P6.scoreSpurs)}<b id="ss">0</b></div></div><div class="bts"><button class="bt" onclick="sim()" style="background:var(--bu);border-color:var(--bu);color:var(--iv)">${N(P6.simulate)}</button><button class="bt o" onclick="rst()">${N(P6.reset)}</button></div><p id="sm" class="q" style="color:var(--go);min-height:1.8em;margin-top:14px"></p>${M(P6.disclaimer)}</div>`]},
+{t:'',n:5,b:[
+ `${K(P8.kicker)}${H(P8.title)}`,
+ Q(P8.lines[0]),Q(P8.lines[1]),
+ `<div class="paper" style="text-align:left">${K(P8.assignLabel)}${Q(P8.assign)}<p></p>${K(P8.statusLabel)}<p class="m" style="color:var(--bu)">${N(P8.status)}</p></div>`,
+ Q(P8.lead),
+ `<div class="paper story"><h3>${N(P8.storyTitle)}</h3>${M(P8.storyBy).replace('class="m"','class="m by"')}${P8.story.map(x=>`<p class="t">${E(x).replace(/\*([^*]+)\*/g,'<em>$1</em>')}</p>`).join('')}</div>`]},
+{t:'cream',n:6,b:[
+ `${K(P9.kicker)}${H(P9.title)}`,
+ Q(P9.lines[0]),Q(P9.lines[1]),Q(P9.lines[2]),
+ {get h(){return `<button class="stk" onclick="this.classList.toggle('fl2');toast(TEXT.eggs.sticker)" aria-label="${E(P9.alt)}"><img src="img/sticker.jpg" alt="${E(P9.alt)}"></button>${M(P9.caption)}`}},
+ `<button class="stk2" onclick="this.classList.toggle('fl2');toast(TEXT.eggs.sticker2)" aria-label="${E(P9.alt2)}"><img src="img/sticker2.webp" alt="${E(P9.alt2)}" loading="lazy"></button>${M(P9.caption2)}`,
+ `<div class="card">${K(P9.reportTitle)}<p class="m" style="line-height:2">${N(P9.report)}</p></div><p class="hw" style="font-size:1.6rem">${N(P9.note)}</p>`,
+ `<div class="bts">${P9.buttons.map(([a],i)=>`<button class="bt o" onclick="toast(TEXT.p9.buttons[${i}][1])">${N(a)}</button>`).join('')}</div>`]},
+{t:'dark',n:7,b:[
+ `${K(P10.kicker)}<button class="board" onclick="toast(TEXT.eggs.teacher)"><h3>${N(P10.title)}</h3><ul>${P10.students.map(x=>`<li>${N(x)}</li>`).join('')}</ul></button>`,
+ Q(P10.lines[0]),Q(P10.lines[1])]},
+{t:'cream',n:8,b:[
+ `${K(P11.kicker)}${H(P11.title)}`,
+ ...P11.steps.map((x,i)=>`${i?'<p class="m">↓</p>':''}<h3>${N(x)}</h3>`),
+ Q(P11.closing),
+ `${H(P11.drTitle)}${M(P11.status)}<p class="m" style="color:var(--bu)">${N(P11.progress)}</p><div class="bar" style="background:rgba(36,31,28,.12)"><i style="width:66%;background:var(--bu)"></i></div>`]},
+{t:'slow',n:9,b:[
+ `${K(P12.kicker)}${H(P12.title)}`,
+ `<div class="paper q" style="min-height:180px;text-align:left;font-size:1.25rem;line-height:1.75">${N(P12.letter)}</div>`,
+ H(P12.happy),
+ Q(P12.signature),
+ `<p class="q" style="opacity:.6">${N(P12.ps)}</p>`]},
+{t:'dark slow',b:[
+ `<div style="font-size:5rem">${T(70)}</div>`,
+ `<div>${T(46)} ${T(70)} ${T(46)}</div>`,Q(P13.oh),Q(P13.line),`<div class="fin">${N(P13.emoji)}</div>`]},
+{t:'slow',b:[
+ {h:H(P14.wait,'margin-top:20vh'),pause:RM?0:2500},
+ `<div style="font-size:3.5rem" role="img" aria-label="${E(P14.envelopeAlt)}">✉️</div>`,
+ {h:`<div class="paper" style="text-align:center">${M(P14.fortuneLabel)}<p id="ft" class="q" style="margin-top:12px"></p></div>${M(P14.end)}`,btn:P14.button,do:fortune}]}
+];
+/* ===== engine ===== */
+let p=0,s=0;const last=PAGES.length-1;
+const bt=i=>{const b=PAGES[p].b[i];return typeof b==='string'?{h:b}:b};
+function add1(){s++;const b=bt(s),d=document.createElement('div');d.className='b';d.innerHTML=b.h||'';$('#pg').appendChild(d);b.do&&b.do();
+ if(b.pause){$('#go').disabled=true;setTimeout(()=>$('#go').disabled=false,b.pause)}
+ d.scrollIntoView({behavior:RM?'auto':'smooth',block:'nearest'})}
+function ui(){const pg=PAGES[p],more=s<pg.b.length-1;
+ $('#go').textContent=more?(bt(s+1).btn||U.cont):(p===last?U.again:U.cont);
+ $('#pgn').textContent=pg.n?`${U.page} ${String(pg.n).padStart(2,'0')} / ${String(PAGES.filter(x=>x.n).length).padStart(2,'0')}`:'';$('#prog').style.width=((p+1)/PAGES.length*100)+'%';
+ $('#bk').style.visibility=p?'visible':'hidden'}
+function show(i,full){p=i;s=-1;const pg=PAGES[i];document.body.className=pg.t||'';
+ $('#stage').innerHTML=`<div class="pg ${pg.t&&pg.t.includes('slow')?'slow':''}" id="pg"></div>`;
+ for(let k=0,n=full?pg.b.length:1;k<n;k++)add1();$('#stage').scrollTop=0;ui();
+ songSync()}
+function fade(fn){const st=$('#stage');st.style.opacity=0;setTimeout(()=>{fn();st.style.opacity=1},RM?0:350)}
+function next(){if(s<PAGES[p].b.length-1){add1();ui()}else if(p<last)fade(()=>show(p+1));else fortune()}
+$('#go').onclick=next;$('#bk').onclick=()=>p&&fade(()=>show(p-1,true));
+$('#mu').onclick=()=>music('p');$('#tc').innerHTML=T(22);$('#tc').onclick=()=>toast(TEXT.eggs.tulip);$('#tc').style.opacity=.55;
+addEventListener('keydown',e=>{if(!$('#intro')&&(e.key==='ArrowRight'||e.key==='Enter'||e.key===' ')&&e.target.tagName!=='BUTTON'){e.preventDefault();next()}if(e.key==='ArrowLeft'&&p)$('#bk').click()});
+/* ===== intro ===== */
+(async()=>{const L=TEXT.intro,tw=$('#tw'),d=RM?0:1;
+ $('#in1').textContent=S.name;$('#in2').textContent=S.title;$('#in3').textContent=S.subtitle;$('#in4').textContent=S.enter;
+ for(const l of L){const e=document.createElement('p');tw.appendChild(e);for(const c of l){e.textContent+=c;await w(38*d)}await w(380*d)}
+ for(const i of ['in1','in2','in3','in4']){await w(600*d);add(i)}
+ $('#in4').onclick=()=>{$('#intro').style.opacity=0;setTimeout(()=>$('#intro').remove(),700);show(0);$('#go').focus()}})();
+$('#go').textContent=U.cont;$('#bk').setAttribute('aria-label',U.back);document.title=S.title;ui();
+</script>
+
+</body>
+</html>
